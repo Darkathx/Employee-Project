@@ -8,7 +8,12 @@ module.exports = {
     },
     mode: "production",
     devServer: {
+        static: {
+            directory: path.resolve(__dirname, "src")
+        },
         port:3200,
-        index: "./index.html",
+        watchOptions: {
+            ignored: "./fake-api"
+        }
     },
 }

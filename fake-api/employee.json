@@ -1,0 +1,22 @@
+{
+  "employees": [
+    {
+      "name": "Ahmet Eroğlu",
+      "department": "HR",
+      "salary": 1,
+      "id": 1
+    },
+    {
+      "name": "Oğuz Artıran",
+      "department": "IT",
+      "salary": 3000,
+      "id": 2
+    },
+    {
+      "name": "Mustafa Murat Coşkun",
+      "department": "IT",
+      "salary": 4000,
+      "id": 3
+    }
+  ]
+}
