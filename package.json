@@ -4,7 +4,9 @@
   "description": "Simple project for learning webpack, npm and node.js basics",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "This is a test!",
+    "start": "webpack-dev-server --output-public-path=/dist/ --mode development --open --hot",
+    "build": "webpack --progress"
   },
   "keywords": [
     "node",
@@ -16,6 +18,7 @@
   "author": "Meriç Kerem Yalçın",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"

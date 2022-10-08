@@ -1,19 +1,23 @@
-var path = require("path");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
     output: {
         filename: "main.js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+        template: './src/index.html',
+      }),
+    ],
     mode: "production",
     devServer: {
+        port: 3200,
         static: {
-            directory: path.resolve(__dirname, "src")
+            directory: path.join(__dirname, "dist"),
         },
-        port:3200,
-        watchOptions: {
-            ignored: "./fake-api"
-        }
+        open: true,
     },
 }
