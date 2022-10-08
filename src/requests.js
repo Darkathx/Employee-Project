@@ -37,7 +37,9 @@
     }
 
     async delete(id) {
-        const response = await fetch(this.url + "/" + id, "DELETE");
+        const response = await fetch(this.url + "/" + id, {
+            method: "DELETE",
+        });
         return "Data successfully erased!";
     }
 
